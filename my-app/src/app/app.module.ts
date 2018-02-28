@@ -11,6 +11,7 @@ import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
+import { CollectionService } from './core/services/collection/collection.service';
 
 @NgModule({
   imports: [
@@ -25,7 +26,7 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent
   ],
-  providers: [],
+  providers: [CollectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
