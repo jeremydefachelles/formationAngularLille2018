@@ -9,7 +9,6 @@ import { SharedModule } from './shared/shared.module';
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 
 import { AppComponent } from './app.component';
-import { ItemsModule } from './items/items.module';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 
@@ -20,7 +19,6 @@ import { environment } from '../environments/environment';
     SharedModule,
     CoreModule,
     HomeModule,
-    ItemsModule,
     AppRoutingModule,
     PageNotFoundModule
   ],

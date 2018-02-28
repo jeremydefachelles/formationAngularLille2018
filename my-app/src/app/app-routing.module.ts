@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { RouterModule, Routes } from '@angular/router';
-import { ListItemsComponent } from './items/components/list-items/list-items.component';
+import { RouterModule, Routes, PreloadingStrategy, PreloadAllModules } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/containers/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'items',  loadChildren: 'app/items/items.module#ItemsModule' },
 ];
 
 @NgModule({
@@ -14,7 +14,8 @@ const appRoutes: Routes = [
     CommonModule,
     RouterModule.forRoot(
       appRoutes,
-      //{ enableTracing: true } // <-- debugging purposes only
+      {preloadingStrategy: PreloadAllModules}
+      // { enableTracing: true } // <-- debugging purposes only
     )
   ],
   exports: [RouterModule]
