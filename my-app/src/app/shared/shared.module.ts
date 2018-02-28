@@ -8,14 +8,15 @@ import { NavComponent } from './components/nav/nav.component';
 import { StateDirective } from './directives/state/state.directive';
 import { StarsPipe } from './pipes/stars/stars.pipe';
 import { FormComponent } from './components/form/form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     NgbModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [NavComponent, StateDirective, StarsPipe, FormComponent],
   exports: [
