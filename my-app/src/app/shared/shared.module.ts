@@ -9,6 +9,7 @@ import { StateDirective } from './directives/state/state.directive';
 import { StarsPipe } from './pipes/stars/stars.pipe';
 import { FormComponent } from './components/form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   imports: [
@@ -18,12 +19,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [NavComponent, StateDirective, StarsPipe, FormComponent],
+  declarations: [NavComponent, StateDirective, StarsPipe, FormComponent, ModalComponent],
   exports: [
     NavComponent,
     StateDirective,
     StarsPipe,
     FormComponent
+  ],
+  entryComponents : [
+    ModalComponent
   ]
 })
 export class SharedModule { }

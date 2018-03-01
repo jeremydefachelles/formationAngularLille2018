@@ -16,6 +16,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment.prod';
 import { CollectionService } from './core/services/collection/collection.service';
 
+/**
+ * @description toto
+ *  */
 @NgModule({
   imports: [
     BrowserModule,

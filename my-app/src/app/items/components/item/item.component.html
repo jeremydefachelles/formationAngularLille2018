@@ -4,6 +4,8 @@
     <span class="state-encours" *ngIf="state.ENCOURS === item.state" >{{ item.state }}</span>
     <span class="state-livree" *ngIf="state.LIVREE === item.state" >{{ item.state }}</span> -->
     <span [appState]="item.state">{{item.state | uppercase}}</span>
+    <i class="material-icons float-right" (click)="delete(item)" >delete</i>
+    <a class="material-icons float-right" [routerLink]="['/items/edit', item.id]" >mode_edit</a>
   </div>
   <div class="card-body">
     <h5 class="card-title">{{ item.name }}</h5>
